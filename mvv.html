@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mission, Vision, Values</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        .section-bg {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
+        }
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <div class="container mx-auto px-4 py-16">
+        <div class="text-center mb-12">
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">私たちの使命と価値</h1>
+            <p class="text-gray-600 max-w-2xl mx-auto">人材を通じて、企業と個人の可能性を最大限に引き出し、社会に価値を創造します</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="section-bg p-8 rounded-lg shadow-md card-hover">
+                <div class="text-center">
+                    <svg class="mx-auto mb-4 w-16 h-16 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <h2 class="text-2xl font-semibold mb-4 text-gray-800">ミッション</h2>
+                    <p class="text-gray-600">
+                        人と企業の可能性を最大化し、イノベーティブな人材マッチングを通じて、社会に持続可能な価値を創造します。
+                    </p>
+                </div>
+            </div>
+
+            <div class="section-bg p-8 rounded-lg shadow-md card-hover">
+                <div class="text-center">
+                    <svg class="mx-auto mb-4 w-16 h-16 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                    </svg>
+                    <h2 class="text-2xl font-semibold mb-4 text-gray-800">ビジョン</h2>
+                    <p class="text-gray-600">
+                        グローバルに活躍できる人材を育成し、企業の成長と個人の夢の実現を支援する、日本トップの人材パートナーになります。
+                    </p>
+                </div>
+            </div>
+
+            <div class="section-bg p-8 rounded-lg shadow-md card-hover">
+                <div class="text-center">
+                    <svg class="mx-auto mb-4 w-16 h-16 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                    </svg>
+                    <h2 class="text-2xl font-semibold mb-4 text-gray-800">バリュー</h2>
+                    <p class="text-gray-600">
+                        誠実さ、革新性、多様性を尊重し、互いの成長を支え合う文化を大切にします。常に学び、挑戦し、社会に貢献します。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
