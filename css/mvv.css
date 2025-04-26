@@ -1,0 +1,240 @@
+        /* 基本設定 */
+        #mvv * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        
+        #mvv {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        #mvv .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        /* タイトル */
+        #mvv h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 70px;
+            padding-top: 30px;
+            color: #1a1a1a;
+            position: relative;
+            display: inline-block;
+        }
+        
+        #mvv h1:after {
+            content: '';
+            position: absolute;
+            width: 30%;
+            height: 3px;
+            background-color: #0073aa;
+            bottom: -10px;
+            left: 35%;
+        }
+        
+        /* タイトル用コンテナ */
+        #mvv .title-container {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+        
+        /* セクション共通 */
+        #mvv .section {
+            margin-bottom: 100px;
+            border-radius: 12px;
+            overflow: hidden;
+            background-color: #fff;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: all 0.4s ease;
+            display: flex;
+            flex-direction: row;
+        }
+        
+        #mvv .section:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0,73,170,0.15);
+        }
+        
+        #mvv .section-image {
+            flex: 0 0 40%;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        #mvv .section-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s ease;
+        }
+        
+        #mvv .section:hover .section-image img {
+            transform: scale(1.08);
+        }
+        
+        #mvv .section-content {
+            flex: 0 0 60%;
+            padding: 40px;
+        }
+        
+        #mvv .section-title {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #0073aa;
+            position: relative;
+            padding-bottom: 12px;
+        }
+        
+        #mvv .section-title:after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 3px;
+            background-color: #0073aa;
+            bottom: 0;
+            left: 0;
+        }
+        
+        #mvv .section-title span {
+            font-size: 1.2rem;
+            color: #666;
+            margin-left: 15px;
+        }
+        
+        #mvv .main-concept {
+            font-size: 1.7rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #1a1a1a;
+            line-height: 1.4;
+        }
+        
+        #mvv .sub-concept {
+            font-size: 1.15rem;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        
+        /* 背景オーバーレイ */
+        #mvv .section-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.5));
+            transition: opacity 0.3s ease;
+        }
+        
+        #mvv .section:hover .section-image::after {
+            opacity: 0.7;
+        }
+        
+        /* セクション固有スタイル */
+        #mvv .mission {
+            background-color: #fff;
+        }
+        
+        #mvv .vision {
+            background-color: #fff;
+        }
+        
+        #mvv .values {
+            background-color: #fff;
+        }
+        
+        /* バリュー特有 */
+        #mvv .values-list {
+            list-style-type: none;
+        }
+        
+        #mvv .values-list li {
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+        
+        #mvv .values-list li:hover {
+            transform: translateX(5px);
+            color: #0073aa;
+        }
+        
+        #mvv .values-list li:before {
+            content: '•';
+            color: #0073aa;
+            font-size: 1.5rem;
+            position: absolute;
+            left: 5px;
+            top: -3px;
+        }
+        
+        /* 画像タイトルオーバーレイ */
+        #mvv .image-title {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: white;
+            font-size: 2.5rem;
+            font-weight: bold;
+            z-index: 2;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+            opacity: 0.9;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+        
+        #mvv .section:hover .image-title {
+            transform: translateY(-10px);
+            opacity: 1;
+        }
+        
+        /* レスポンシブ */
+        @media (max-width: 900px) {
+            #mvv .section {
+                flex-direction: column;
+            }
+            
+            #mvv .section-image {
+                flex: 0 0 200px;
+            }
+            
+            #mvv .section-content {
+                flex: auto;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            #mvv h1 {
+                font-size: 2rem;
+            }
+            
+            #mvv .section-title {
+                font-size: 1.5rem;
+            }
+            
+            #mvv .section-title span {
+                margin-left: 0;
+                display: block;
+                margin-top: 5px;
+            }
+            
+            #mvv .main-concept {
+                font-size: 1.3rem;
+            }
+            
+            #mvv .section-content {
+                padding: 25px;
+            }
+            
+            #mvv .image-title {
+                font-size: 1.8rem;
+            }
+        }
