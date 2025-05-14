@@ -347,15 +347,33 @@ header {
 }
 
 .interview-grid {
+    /* 変更前
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 30px;
     margin-top: 40px;
     justify-content: center;
     justify-items: center;
+    */
+    display: grid;
+  grid-template-columns: repeat(3, 300px); /* 3つの固定幅カラム */
+  gap: 30px;
+  margin-top: 40px;
+  justify-content: center; /* グリッド全体を中央揃え */
 
 
 }
+@media (max-width: 1000px) {
+    .interview-grid {
+      grid-template-columns: repeat(2, 300px);
+    }
+  }
+  
+  @media (max-width: 650px) {
+    .interview-grid {
+      grid-template-columns: 300px;
+    }
+  }
 
 .interview-card {
     background-color: white;
@@ -734,7 +752,7 @@ header {
 /* 採用セクション */
 .recruit {
     padding: 80px 5%;
-    background-color: #f9f9f9;
+    background-color: #f8f9fa;
     display: flex;
     align-items: center;
     gap: 40px;
@@ -791,7 +809,7 @@ header {
 
 .company {
     padding: 100px 0;
-    background-color: #f9f9f9;
+    background-color: #f8f9fa;
 }
 
 .company-grid {

@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SC direct | 次代を、創る。</title>
+    <title>SC direct | 人生に、戦略を。</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/mvv.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&sans-serif" rel="stylesheet">
 </head>
@@ -15,20 +16,56 @@
     <header>
         <img src="img/S-crew_logo.ai (2).png" alt="Leverages" class="logo">
         <nav class="nav-menu">
-            <a href="#">COMPANY</a>
-            <a href="#">BUSINESS</a>
-            <a href="#">NEWS</a>
-            <a href="#">RECRUIT</a>
-            <a href="#">CONTACT</a>
-        </nav>
-        <div class="search-icon">🔍</div>
-    </header>
+            <a href="#company">COMPANY</a>
+            <a href="#business">BUSINESS</a>
+            <a href="#news">NEWS</a>
+            <a href="#recruit">RECRUIT</a>
+            <a href="#contact">CONTACT</a>
+            <a href="thanks.html">thanks</a>
+            <a href="privacy_policy.html">pv</a>
 
-    <!-- メインビジュアル２ -->
+        </nav>
+        <div class="search-icon"></div>
+    </header>
+    <script>
+        // スムーズスクロール用のJavaScript
+        document.addEventListener('DOMContentLoaded', function () {
+            // 全てのページ内リンクを取得
+            const links = document.querySelectorAll('a[href^="#"]');
+
+            // 各リンクにイベントリスナーを追加
+            links.forEach(link => {
+                link.addEventListener('click', function (e) {
+                    // デフォルトのジャンプ動作を防ぐ
+                    e.preventDefault();
+
+                    // リンク先の要素のIDを取得
+                    const targetId = this.getAttribute('href');
+
+                    // リンク先の要素を取得
+                    const targetElement = document.querySelector(targetId);
+
+                    // リンク先の要素が存在する場合
+                    if (targetElement) {
+                        // スムーズスクロール
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',  // スムーズスクロールを有効化
+                            block: 'start'       // 要素の上部に合わせてスクロール
+                        });
+
+                        // URLにハッシュを追加（履歴に残す）
+                        history.pushState(null, null, targetId);
+                    }
+                });
+            });
+        });
+    </script>
+
+    <!-- メインビジュアル -->
     <section class="full-height noto-serif">
         <section class="h-full">
             <div class="initial-overlay">
-                <h2 class="text-4xl font-bold text-black">自分を輝かせろ！</h2>
+                <h2 class="text-4xl font-bold text-black">人生に、戦略を。</h2>
             </div>
 
             <div class="relative h-full">
@@ -42,21 +79,21 @@
                     id="gradient-overlay"></div>
 
                 <div class="relative flex h-full responsive-flex hidden md:flex">
-                    <div class="w-1/2 flex flex-col items-center justify-center responsive-logo opacity-0 transition-opacity duration-1000"
+                    <div class="w-3/4 flex flex-col items-center justify-center responsive-logo opacity-0 transition-opacity duration-1000"
                         id="logo-section">
-                        <img src="img/S-crew_logo.png" alt="SC-direct Logo" class="w-[300px] mb-4">
-                        <h2 class="text-white text-3xl font-bold">SC-direct</h2>
+                        <img src="img/S-crew_logo.png" alt="SC-direct Logo" class="w-[400px] mb-4">
+                        <h2 class="text-white text-3xl font-bold">SC direct</h2>
                     </div>
 
-                    <div class="w-1/2 flex items-center justify-center text-right pr-16 responsive-text opacity-0 transition-opacity duration-1000"
+                    <div class="w-3/4 flex items-center justify-center text-right pr-16 responsive-text opacity-0 transition-opacity duration-1000"
                         id="text-section">
                         <div class="text-white">
                             <h1 class="text-7xl font-bold mb-4">
-                                一人ひとりの<br>
-                                才能を呼び覚まし、
+                                意志ある選択が<br>
+                                未来をつくる
                             </h1>
                             <p class="text-5xl">
-                                企業の成長エンジンに
+
                             </p>
                         </div>
                     </div>
@@ -70,7 +107,7 @@
 
                     <div class="mobile-logo">
                         <img src="img/S-crew_logo.png" alt="SC-direct Logo" class="w-[100px]">
-                        <h2 class="text-white text-xl font-bold">SC-direct</h2>
+                        <h2 class="text-white text-xl font-bold">SC direct</h2>
                     </div>
 
                     <div class="mobile-text">
@@ -88,47 +125,18 @@
     </section>
 
 
-    <!-- コメントアウト 
-    <!- WHO WE ARE セクション 
-    <section class="who-we-are fade-in">
-        <h2 class="section-title">WHO WE ARE</h2>
-        <p class="section-text">
-            生きがいを感じながら働き、<br>
-            ユーザーに上質な体験を届ける。
-        </p>
-        <a href="#" class="button">COMPANY PAGE</a>
-    </section>
-
-    <!- カテゴリーセクション ->
-    <div class="categories">
-        <div class="category business fade-in">
-            <h2 class="category-title">BUSINESS</h2>
-            <p class="category-text">
-                クライアントからの課題をビジネスの力で解決します。
-            </p>
-            <a href="#" class="button">BUSINESS PAGE</a>
-        </div>
-        <div class="category global fade-in">
-            <h2 class="category-title">GLOBAL</h2>
-            <p class="category-text">
-                私たちは世界中のパートナーと協力してグローバルな価値を創造します。
-            </p>
-            <a href="#" class="button">GLOBAL PAGE</a>
-        </div>
-    </div>
-    -->
-
-    <!-- 追加カテゴリーセクション -->
+    <!-- MV下のリンクテゴリーセクション -->
     <section class="flex flex-col min-h-[50vh]">
         <section class="relative min-h-[50vh]">
-            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('img/weare.png')">
+            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('img/mvv2.png')">
                 <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
                     <div class="text-center text-white px-4">
-                        <h1 class="text-4xl font-bold mb-4">WHO WE ARE</h1>
-                        <p class="text-xl mb-6">社会の課題に取り組み、ユーザーの幸福を追求し続ける</p>
-                        <a href="#"
+                        <h1 class="text-4xl font-bold mb-4">MISSION VISION VALUE</h1>
+                        <p class="text-xl mb-6">なすべきこと・あるべき姿・やるべきこと
+                        </p>
+                        <a href="#mvv"
                             class="inline-block border border-white px-6 py-2 hover:bg-white hover:text-black transition-colors">
-                            COMPANY PAGE ›
+                            MVV ›
                         </a>
                     </div>
                 </div>
@@ -137,13 +145,13 @@
 
         <main class="flex flex-col md:flex-row">
             <section class="md:w-1/2 h-[50vh] md:h-[70vh]">
-                <div class="section-overlay" style="background-image: url('img/zinzaisyokai.png')">
+                <div class="section-overlay" style="background-image: url('img/portforio.png')">
                     <div class="section-content">
                         <h2 class="text-3xl font-bold mb-4">BUSINESS</h2>
-                        <p class="mb-6">国や業界を絞らない事業ポートフォリオ</p>
-                        <a href="#"
+                        <p class="mb-6">未来を描ける事業ポートフォリオ</p>
+                        <a href="#business"
                             class="inline-block border border-white px-6 py-2 hover:bg-white hover:text-black transition-colors">
-                            BUSINESS PAGE ›
+                            BUSINESS ›
                         </a>
                     </div>
                 </div>
@@ -152,11 +160,11 @@
             <section class="md:w-1/2 h-[50vh] md:h-[70vh]">
                 <div class="section-overlay" style="background-image: url('img/ses.png')">
                     <div class="section-content">
-                        <h2 class="text-3xl font-bold mb-4">GLOBAL</h2>
-                        <p class="mb-6">社会課題の視野は世界へ</p>
-                        <a href="#"
+                        <h2 class="text-3xl font-bold mb-4">RECRUIT</h2>
+                        <p class="mb-6">未経験でも、自分の意思でキャリアを選べる世の中に。</p>
+                        <a href="#recruit"
                             class="inline-block border border-white px-6 py-2 hover:bg-white hover:text-black transition-colors">
-                            GLOBAL PAGE ›
+                            RECRUIT ›
                         </a>
                     </div>
                 </div>
@@ -169,71 +177,47 @@
 
 
     <!-- インタビューセクション -->
-    <section class="interview fade-in">
+    <section id="business" class="interview fade-in">
         <h2 class="interview-title">BUSINESS</h2>
         <div class="interview-grid">
             <div class="interview-card">
                 <img src="img/zinzaihaken.png" alt="Interview" class="interview-image">
                 <div class="interview-content">
-                    <h3>人材派遣業</h3>
-                    <p>企業の人材ニーズに応じて、労働者を一定期間または特定の業務に派遣する事業です。弊社が労働者を雇用し、必要に応じて企業に派遣することで、企業の人材確保や業務効率化を支援します。柔軟な人員配置と即戦力の確保が可能です。
+                    <h3>HRソリューション事業</h3>
+                    <p>私たちのHRソリューション事業は、人材派遣と人材紹介を有機的に組み合わせた包括的なサービスです。企業の多様な人材ニーズに対応し、最適な人材配置を実現します。即戦力となる派遣スタッフの提供から、長期的な戦力となる正社員の採用支援まで、あらゆる雇用形態に対応。独自の人材データベースと業界知識を活かし、企業の成長戦略に合わせた最適な人材ソリューションをご提案します。採用コスト削減と業務効率化を同時に実現し、貴社の持続的な成長をサポートいたします。
                     </p>
                 </div>
             </div>
             <div class="interview-card">
                 <img src="img/zinzaisyokai.png" alt="Interview" class="interview-image">
                 <div class="interview-content">
-                    <h3>人材紹介業</h3>
-                    <p>弊社の人材紹介サービスは、求職者と求人企業をマッチングさせる専門的なサービスです。キャリアコンサルタントが個人の経験、スキル、希望を分析し、最適な求人を提案。企業側には優秀な人材を、求職者側には自分に合った仕事を見つける機会を提供し、双方のニーズを効果的にサポートします。
+                    <h3>アウトソーシング事業</h3>
+                    <p>私たちのアウトソーシング事業は、企業の業務効率化と本業集中を支援する総合サービスです。専門スタッフによる業務代行から、プロジェクト単位の一括受託まで幅広く対応。長年の人材派遣で培った業界知識と豊富な人材リソースを活かし、コスト削減と品質向上を両立させます。採用・教育コストの軽減はもちろん、業務プロセスの最適化提案も含めた包括的なソリューションをご提供。経営資源を戦略的業務に集中させ、貴社の競争力強化と持続的成長をサポートいたします。
                     </p>
-                    <button> <a href="#">more➡</a></button>
                 </div>
             </div>
             <div class="interview-card">
                 <img src="img/outsorce.png" alt="Interview" class="interview-image">
                 <div class="interview-content">
-                    <h3>アウトソーシング</h3>
-                    <p>アウトソーシングサービスは、企業が自社の業務や機能の一部を外部の専門企業に委託いただけるサービスです。コスト削減、専門性の活用、業務効率化を目的とし、情報システム、経理、人事、マーケティングなど、幅広い分野で活用されています。
-                    </p>
-                </div>
-            </div>
-            <div class="interview-card">
-                <img src="img/ses.png" alt="Interview" class="interview-image">
-                <div class="interview-content">
                     <h3>IT事業</h3>
-                    <p>ほにゃほにゃほにゃほにゃほにゃほにゃほにゃほにゃほにゃほにゃほにゃほにゃほにゃほにゃほにゃほにゃ</p>
-                </div>
-            </div>
-            <!--
-            <div class="interview-card">
-                <img src="img01.jpg" alt="Interview" class="interview-image">
-                <div class="interview-content">
-                    <h3>IT受託制作サービス</h3>
-                    <p>IT受託制作事業は、企業や組織からシステム開発、ウェブサイト制作、アプリケーション開発などのIT関連プロジェクトを請け負うサービスです。顧客の要望に基づき、企画から設計、開発、保守まで一貫したソリューションを提供し、技術的な課題を解決します。
+                    <p>私たちのIT事業は、高度な技術力を持つエンジニアのSES（システムエンジニアリングサービス）を中心とした包括的なITソリューションです。システム開発からインフラ構築、保守運用まで、お客様の多様なIT課題に対応します。プロジェクト単位での技術者派遣はもちろん、要件定義から納品までの一括受託開発も展開。最新技術に精通したエンジニア集団が、業務効率化やDX推進など、企業の競争力強化に直結するシステム構築をサポートします。柔軟な対応力と確かな技術で、お客様のビジネス成長を加速させます。
                     </p>
                 </div>
             </div>
-            -->
         </div>
     </section>
-
-    <!-- 採用情報バナー -->
-    <div class="recruit-banner fade-in">
-        <h2 class="recruit-banner-title">レバレジーズでもっと働く楽しさを感じたいと思ったら</h2>
-        <a href="#" class="button">RECRUIT INFO</a>
-    </div>
 
     <!-- 採用情報バナー -->
     <section class="banner-section">
         <div class="banner-content">
             <p>事業への思い、チームワーク、個々の成長など</p>
-            <h2>レバレジーズではたらく楽しさをもっと</h2>
+            <h2>SC directではたらく楽しさをもっと</h2>
         </div>
-        <a href="#" class="banner-button">meLeV ALL</a>
+        <a href="#" class="banner-button">求人をみる</a>
     </section>
 
     <!-- ニュースセクション -->
-    <section class="news-section">
+    <section id="news" class="news-section">
         <div class="news-header">
             <h2>NEWS</h2>
             <span>ニュース</span>
@@ -298,7 +282,7 @@
                 <div class="company-content">
                     <h2>私たちについて</h2>
                     <p>SC
-                        directは人材派遣業界に革新をもたらすべく、常に高品質なサービスの提供に努めてまいりました。「人と企業の可能性を最大化する」というミッションのもと、多様な人材サービスを通じて企業の成長と個人のキャリア構築をサポートしています。
+                        directは人材派遣業界に革新をもたらすべく、常に高品質なサービスの提供に努めてまいりました。「人生に、戦略を。」というミッションのもと、多様な人材サービスを通じて企業の成長と個人のキャリア構築をサポートしています。
                     </p>
                     <p>私たちは単なる人材の仲介ではなく、双方にとって最適なマッチングを実現することで、持続可能な関係の構築を目指しています。社会の変化に柔軟に対応しながら、常に新しい価値を創造し続けます。</p>
 
@@ -340,9 +324,71 @@
             </div>
         </div>
     </section>
+    <section id="mvv">
+        <div class="container">
+            <div class="title-container" data-aos="fade-down" data-aos-duration="1000">
+                <h1>MISSION・VISION・VALUE</h1>
+            </div>
+
+            <div class="section mission" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">
+                <div class="section-image">
+                    <img src="img/senryaku.png" alt="ミッションイメージ">
+                    <div class="image-title">MISSION</div>
+                </div>
+                <div class="section-content">
+                    <h2 class="section-title">Mission <span>使命</span></h2>
+                    <p class="main-concept">「人生に、戦略を。」</p>
+                    <p class="sub-concept">意志ある選択が未来をつくる。</p>
+                </div>
+            </div>
+
+            <div class="section vision" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="100">
+                <div class="section-content">
+                    <h2 class="section-title">Vision <span>目指す未来</span></h2>
+                    <p class="main-concept">「若者が"なんとなく働く"を卒業できる社会をつくる。」</p>
+                    <p class="sub-concept">未経験でも、自分の意思でキャリアを選べる世の中に。</p>
+                </div>
+                <div class="section-image">
+                    <img src="img/zinzaihaken.png" alt="ビジョンイメージ">
+                    <div class="image-title">VISION</div>
+                </div>
+            </div>
+
+            <div class="section values" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                <div class="section-image">
+                    <img src="img/value.png" alt="バリューイメージ">
+                    <div class="image-title">VALUES</div>
+                </div>
+                <div class="section-content">
+                    <h2 class="section-title">Values <span>大切にする価値観</span></h2>
+                    <ul class="values-list">
+                        <li data-aos="fade-left" data-aos-delay="200">自分の"軸"を持って動く</li>
+                        <li data-aos="fade-left" data-aos-delay="300">ゴールから逆算して考える</li>
+                        <li data-aos="fade-left" data-aos-delay="400">準備も勝負の一部と捉える</li>
+                        <li data-aos="fade-left" data-aos-delay="500">正直で、前向きな判断を選ぶ</li>
+                        <li data-aos="fade-left" data-aos-delay="600">仲間の本気に本気で応える</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                AOS.init({
+                    once: false,
+                    mirror: true
+                });
+
+                // スクロール検知によるアニメーション再初期化
+                window.addEventListener('scroll', function () {
+                    AOS.refresh();
+                });
+            });
+        </script>
+    </section>
 
     <!-- 採用セクション -->
-    <section class="recruit fade-in">
+    <section id="recruit" class="recruit fade-in">
         <div class="recruit-content">
             <h2 class="recruit-title">生きがいを感じながら働くとは、そもそも</h2>
             <p class="recruit-text">
@@ -352,15 +398,15 @@
             </p>
             <a href="#" class="button">RECRUIT PAGE</a>
         </div>
-        <img src="img/img01.jpg" alt="Recruit" class="recruit-image">
+        <img src="img/r2.png" alt="Recruit" class="recruit-image">
     </section>
 
     <!-- コンタクトページ -->
     <section class="contact" id="contact">
         <div class="container">
             <div class="section-header">
-                <h2>お問い合わせ</h2>
-                <p>サービスに関するご質問やお見積もりなど、お気軽にお問い合わせください。</p>
+                <h2>CONTACT</h2>
+                <p>お気軽にお問い合わせください。</p>
             </div>
             <div class="contact-form">
                 <form action="contact_handler.php" method="POST">
@@ -401,7 +447,7 @@
             <div class="footer-column">
                 <h3 class="footer-heading">COMPANY</h3>
                 <ul class="footer-links">
-                    <li><a href="#" class="footer-link">会社概要</a></li>
+                    <li><a href="privacy_policy.html" class="footer-link">会社概要</a></li>
                     <li><a href="#" class="footer-link">ビジョン</a></li>
                     <li><a href="#" class="footer-link">沿革</a></li>
                     <li><a href="#" class="footer-link">アクセス</a></li>
@@ -436,7 +482,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            &copy; 2025 Leverages Inc. All Rights Reserved.
+            &copy; 2025 SC direct Inc. All Rights Reserved.
         </div>
     </footer>
 
@@ -518,17 +564,6 @@
                     }, 500);
                 }
             }, 3000);
-        });
-        // 追加カテゴリービジュアル
-        const sections = document.querySelectorAll('.section-overlay');
-
-        sections.forEach(section => {
-            section.addEventListener('click', () => {
-                const newBackgroundUrl = prompt('Enter a new background image URL:');
-                if (newBackgroundUrl) {
-                    section.style.backgroundImage = `url('${newBackgroundUrl}')`;
-                }
-            });
         });
     </script>
 </body>
